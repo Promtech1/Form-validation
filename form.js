@@ -27,5 +27,16 @@ function onSubmit(e) {
         emailInput.value = "";
     }
 
-    
+    console.log(!!msg)
+    setTimeout(() => {
+        addError()
+    }, 3000);
+}
+
+function addError(){
+    if(!!msg == true){
+        msg.style.display = "none"
+    }else{
+        msg.style.display = "block"
+    }
 }
